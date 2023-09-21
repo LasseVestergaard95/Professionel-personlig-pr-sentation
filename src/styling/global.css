@@ -1,0 +1,26 @@
+/* Nulstilling af margin og padding på alle elementer, samt ændring af box model på alle elementer */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  --primary_bg_col: #eee9e4;
+  --secondary_bg_col: #666666;
+  --primary_text_col: #27221e;
+  --secondary_text_col: #ebdfdf;
+}
+
+/* Normalisering af font og linjehøjde på dokumentets tekster, samt nedtoning af tekstfarven */
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--primary_text_col);
+  background-color: var(--primary_bg_col);
+}
+
+/* Normalisering af billeder */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
