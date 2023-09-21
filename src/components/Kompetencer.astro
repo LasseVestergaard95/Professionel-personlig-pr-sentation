@@ -1,3 +1,22 @@
 ---
-
+const {kompetence, værdi}= Astro.props;
 ---
+
+<div class="container">
+<p class="header">{kompetence}</p>
+<p class="value">{værdi}</p>
+</div>
+
+<style>
+ .container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+ }
+
+ .header{
+    font-size: 1.3rem;
+    font-family: "futura-pt-bold";
+    line-height: 1;
+ }
+</style>

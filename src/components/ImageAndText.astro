@@ -1,0 +1,53 @@
+---
+const {header, text, image} = Astro.props;
+---
+
+<div id="container">
+<img src={image} alt="">
+<div class="textfield">
+<h2>{header}</h2>
+<p>{text}</p>
+</div>
+<slot />
+</div>
+
+<style>
+    #container{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-inline: auto;
+        padding-inline: 1rem;
+        padding-block: 2rem;
+    }
+
+    img{
+border-radius: 50%;
+object-fit: cover;
+aspect-ratio: 1/1;
+width: 15rem;
+max-width: 100%;
+object-position: center top;
+
+    }
+    .textfield{
+        margin-block: 1rem;
+        max-width: 65ch;
+    }
+    h2{
+        font-weight: var(--h2_weight);
+    }
+
+    @media (min-width: 768px){
+        
+        #container{
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 2rem;
+        }
+
+    }
+
+
+</style>

@@ -2,7 +2,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+padding: 0;
 
   --primary_bg_col: #eee9e4;
   --secondary_bg_col: #666666;
@@ -17,6 +17,7 @@ body {
   line-height: 1.6;
   color: var(--primary_text_col);
   background-color: var(--primary_bg_col);
+
 }
 
 /* Normalisering af billeder */
@@ -24,5 +25,9 @@ img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+h2{
+  font-weight: var(--h2_weight);
 }
 
