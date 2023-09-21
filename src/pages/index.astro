@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import ImageAndText from "../components/ImageAndText.astro";
 import Kompetencer from "../components/Kompetencer.astro";
 import TextAndImage from "../components/TextAndImage.astro";
+import Projekt from "../components/Projekt.astro";
 ---
 
 <MainLayout>
@@ -30,6 +31,10 @@ import TextAndImage from "../components/TextAndImage.astro";
 <Kompetencer kompetence="ADOBE XD" værdi="Begynder" />
 </div>
 </section>
+<section id="projekt">
+	<Projekt image="omada.png" alt="Omada projekt" link="https://omada-grp9.netlify.app" description="Redesign af onepager til Omadas vin og delikatesse butik"/>
+	<Projekt image="omada.png" alt="Omada projekt" link="https://omada-grp9.netlify.app" description="Redesign af onepager til Omadas vin og delikatesse butik"/>
+</section>
 </MainLayout>
 <style>
 
@@ -37,6 +42,14 @@ import TextAndImage from "../components/TextAndImage.astro";
 		background-color: var(--secondary_bg_col);
 		color: var(--secondary_text_col);
 
+	}
+	#projekt{
+		padding-inline: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 2rem;
+	margin-block: 2rem;
 	}
 
 	#kompetencer{
