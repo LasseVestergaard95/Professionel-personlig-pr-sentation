@@ -3,7 +3,7 @@ const { kompetence, værdi } = Astro.props;
 ---
 
 <div class="container">
-<img src={kompetence} alt="">
+  <img src={kompetence} alt="" />
   <p class="value">{værdi}</p>
 </div>
 
@@ -14,9 +14,9 @@ const { kompetence, værdi } = Astro.props;
     text-align: center;
     align-items: center;
   }
-img{
-  width: 85px;
-  height:100px;
-  object-fit: scale-down;
-}
+  img {
+    width: 85px;
+    height: 100px;
+    object-fit: scale-down;
+  }
 </style>
