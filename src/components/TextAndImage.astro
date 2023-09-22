@@ -1,53 +1,52 @@
 ---
-const {første_overskrift, første_brødtekst, anden_overskrift, anden_brødtekst} = Astro.props;
+const { første_overskrift, første_brødtekst, anden_overskrift, anden_brødtekst } = Astro.props;
 ---
 
 <div id="container">
-<div class="textfield">
+  <div class="textfield">
     <h2>{første_overskrift}</h2>
     <p>{første_brødtekst}</p>
     <h2>{anden_overskrift}</h2>
     <p>{anden_brødtekst}</p>
-</div>
-<div class="images">
-    <img src="shopify.png" alt="">
-    <img src="bs.png" alt="">
-</div>
+  </div>
+  <div class="images">
+    <img src="shopify.png" alt="" />
+    <img src="bs.png" alt="" />
+  </div>
 </div>
 
 <style>
-    #container{
-        padding-inline: 1rem;
-        padding-block: 2rem;
-        display: flex;
-        flex-direction: column;
-    }
-    .textfield{
-        max-width: 65ch;
-    }
-    p{
-        margin-bottom: 2rem;
-    }
-    .images{
-        display: flex;
-        justify-content: space-evenly;
-    }
-.images img{
+  #container {
+    padding-inline: 1rem;
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .textfield {
+    max-width: 65ch;
+  }
+  p {
+    margin-bottom: 2rem;
+  }
+  .images {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .images img {
     width: 6rem;
     max-width: 100%;
-height: 100%;
-}
+    height: 100%;
+  }
 
-@media (min-width: 768px){
-    #container{
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
+  @media (min-width: 768px) {
+    #container {
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
     }
-    .images{
-        flex-direction: column;
-   row-gap: 3rem;
+    .images {
+      flex-direction: column;
+      row-gap: 3rem;
     }
-}
-
+  }
 </style>

@@ -1,37 +1,49 @@
 ---
-const {image, link, alt, description}=Astro.props;
+const { image, link, alt, description } = Astro.props;
 ---
 
 <div id="container">
-    <div>
-    <img src={image} alt={alt}></div>
-    <div>
-    <p>{description}</p>
-    <a href={link} target="_blank"> Se projektet</a></div>
+  <div>
+    <img src={image} alt={alt} />
+  </div>
+    <div><p>{description}</p></div>
+    <div class="link">
+      <a href={link} target="_blank"> Se projektet</a>
+    </div>
 </div>
 
 <style>
-    #container{
-        width: 17rem;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-row-gap: 1rem;
-box-shadow: 0 8px 8px -4px rgb(61, 64, 65);
-padding-bottom: 1rem;
-
-    }
-    a{
-        color: var(--primary_text_col);
-        text-decoration: none;
-        border: 1px black solid;
-        border-radius: 10px;
-        padding-inline: 1rem;
-        cursor: pointer;
-    }
-    p{
-        margin-bottom: 1rem;
-    }
-
-
+  #container {
+    width: 17rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    box-shadow: 0 8px 8px -4px rgb(61, 64, 65);
+    padding-bottom: 1rem;
+  }
+  a {
+    color: var(--primary_text_col);
+    text-decoration: none;
+    border: 1px black solid;
+    border-radius: 10px;
+    padding-inline: 1rem;
+    width: fit-content;
+    cursor: pointer;
+  }
+  a:hover {
+    font-weight: 600;
+    border: 2px black solid;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+  img {
+    aspect-ratio: 3/2;
+    object-fit: cover;
+  }
+  .link{
+    margin-top: auto;
+  }
 </style>
