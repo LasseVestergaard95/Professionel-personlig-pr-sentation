@@ -3,7 +3,7 @@ const { kompetence, værdi } = Astro.props;
 ---
 
 <div class="container">
-  <p class="header">{kompetence}</p>
+<img src={kompetence} alt="">
   <p class="value">{værdi}</p>
 </div>
 
@@ -12,11 +12,11 @@ const { kompetence, værdi } = Astro.props;
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
-
-  .header {
-    font-size: 1.3rem;
-    font-family: "futura-pt-bold";
-    line-height: 1;
-  }
+img{
+  width: 85px;
+  height:100px;
+  object-fit: scale-down;
+}
 </style>
