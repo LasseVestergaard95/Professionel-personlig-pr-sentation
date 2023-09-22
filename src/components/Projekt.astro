@@ -4,7 +4,7 @@ const { image, link, alt, description } = Astro.props;
 
 <div id="container">
   <div>
-    <img src={image} alt={alt} />
+   <a href={link} target="_blank"><img src={image} alt={alt}/></a>
   </div>
     <div><p>{description}</p></div>
     <div class="link">
@@ -22,8 +22,15 @@ const { image, link, alt, description } = Astro.props;
     row-gap: 1rem;
     box-shadow: 0 8px 8px -4px rgb(61, 64, 65);
     padding-bottom: 1rem;
+    transform: scale(1);
+    transition-duration: 0.2s;
+
   }
-  a {
+  #container:hover{
+transform: scale(1.1);
+transition-duration: 0.3s;
+  }
+  .link a {
     color: var(--primary_text_col);
     text-decoration: none;
     border: 1px black solid;
@@ -32,7 +39,7 @@ const { image, link, alt, description } = Astro.props;
     width: fit-content;
     cursor: pointer;
   }
-  a:hover {
+  .link a:hover {
     font-weight: 600;
     border: 2px black solid;
   }
